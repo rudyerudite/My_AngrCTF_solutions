@@ -14,13 +14,13 @@ path = sys.argv[1]
 project = angr.Project(path)
 start_addr= 0x08048606
 initial_state= project.factory.blank_state(addr=start_addr)
-
+# for the 4 user inputs
 pswd0=claripy.BVS('pswd0',8*8)
 pswd1=claripy.BVS('pswd1',8*8)
 pswd2=claripy.BVS('pswd2',8*8)
 pswd3=claripy.BVS('pswd3',8*8)
-#8*8 --> always given in bits! Here for %8s we must have 8 char each of 1 byte
 
+# 8*8 --> always given in bits! Here for %8s we must have 8 char each of 1 byte
 pswd0_addr=0xa29faa0
 initial_state.memory.store(pswd0_addr,pswd0)
 pswd1_addr=0xa29faa8
