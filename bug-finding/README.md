@@ -1,4 +1,4 @@
-## Basic Buffer Overflow finder using Angr
+## Finding Basic Buffer Overflow using Angr
 
 Major reference: https://breaking-bits.gitbook.io/breaking-bits/vulnerability-discovery/automated-exploit-development/buffer-overflows
 
